@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: npm ci
-      - run: npm install hexo-cli && hexo init
+      - run: npm init && npm ci
+      - run: npm install hexo-cli --save && hexo init
 
   publish-npm:
     needs: build
