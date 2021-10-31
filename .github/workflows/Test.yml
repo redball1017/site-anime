@@ -22,6 +22,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install hexo-cli -g && hexo init doc && cd doc && npm install && npm fund
-      - run: cd .\doc\ && npm run build --if-present
+      - run: cd doc && npm run build --if-present
       
-      - run: cd .\doc\ && npm test
+      - run: cd doc && npm run build --if-present
